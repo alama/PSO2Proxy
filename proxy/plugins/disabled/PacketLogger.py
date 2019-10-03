@@ -73,7 +73,7 @@ class OptOut(commands.Command):
     def call_from_client(self, client):
         archive_packets(client)
         client_config = dbManager.get_data_for_sega_id(client.myUsername)
-        client_config['logPackets'] = True
+        client_config['logPackets'] = False
         client.send_crypto_packet(
             packetFactory.SystemMessagePacket(
                 "[PacketLogging] {red}You have disabled packet logging! :( If you change your mind, please use !optin to rejoin!",
