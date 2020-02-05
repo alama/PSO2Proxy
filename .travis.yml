@@ -2,6 +2,7 @@ language: python
 dist: trusty
 sudo: false
 install: true
+python: 2.7
 
 addons:
   apt:
